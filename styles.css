@@ -244,7 +244,7 @@ header nav ul li a:hover {
 }
 
 .feature-card {
-    background-color: #f5f9f2;
+    background-color: #cce3c4;
     border: none;
     border-radius: 15px;
     padding: 2rem;
@@ -415,6 +415,9 @@ footer .social-links a:hover {
     outline: none;
     border-color: #2c5e1e;
     box-shadow: 0 0 5px rgba(44, 94, 30, 0.2);
+}
+textarea.form-control::placeholder {
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .contact-form textarea.form-control {
