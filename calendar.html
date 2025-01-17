@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Days Calendar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .day-counter {
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            gap: 8px;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .day-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .future {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .past {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .today {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px #ffffff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="day-counter" id="dayCounter"></div>
+    <div class="calendar-grid" id="calendar"></div>
+
+    <script>
+        function createCalendar() {
+            const calendar = document.getElementById('calendar');
+            const dayCounter = document.getElementById('dayCounter');
+            const today = new Date();
+            const startOfYear = new Date(today.getFullYear(), 0, 1);
+            const daysInYear = 365;
+
+            // Calculate current day of year
+            const start = new Date(today.getFullYear(), 0, 0);
+            const diff = today - start;
+            const oneDay = 1000 * 60 * 60 * 24;
+            const currentDay = Math.floor(diff / oneDay);
+            
+            // Update day counter
+            dayCounter.textContent = `${currentDay}/365`;
+
+            for (let day = 1; day <= daysInYear; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'day-dot';
+                
+                const currentDate = new Date(startOfYear);
+                currentDate.setDate(currentDate.getDate() + day - 1);
+                
+                if (currentDate < today) {
+                    dayElement.classList.add('past');
+                } else if (
+                    currentDate.getDate() === today.getDate() &&
+                    currentDate.getMonth() === today.getMonth()
+                ) {
+                    dayElement.classList.add('today');
+                } else {
+                    dayElement.classList.add('future');
+                }
+
+                dayElement.title = currentDate.toLocaleDateString();
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        createCalendar();
+    </script>
+</body>
+</html>
