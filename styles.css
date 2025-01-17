@@ -1,8 +1,24 @@
 /* General Styles */
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 0rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer Styles */
 footer {
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
     background-color: #2c5e1e;
     color: #ffffff;
     text-align: center;
@@ -137,10 +153,11 @@ header .brand h1 {
 .hero {
     text-align: center;
     padding: 1rem;
-    margin: 2rem auto;
+    margin: 0 auto;
     max-width: 8000px;
     background: linear-gradient(135deg, rgba(44, 94, 30, 0.9), rgba(168, 232, 144, 0.9));
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0;
 }
 
 .hero h2 {
@@ -244,13 +261,14 @@ header .brand h1 {
     border: 1px solid #cce3c4;
     border-radius: 4px;
     font-size: 0.9rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .form-control:focus {
     outline: none;
     border-color: #2c5e1e;
-    box-shadow: 0 0 4px rgba(44, 94, 30, 0.2);
+    box-shadow: 0 0 6px rgba(44, 94, 30, 0.25);
 }
 
 textarea.form-control::placeholder {
@@ -271,10 +289,12 @@ textarea.form-control::placeholder {
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form .btn-primary:hover {
     background-color: #1f4115;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form .btn-primary i {
@@ -332,5 +352,30 @@ textarea.form-control::placeholder {
 @media (max-width: 768px) {
     .search {
         padding: 0 1rem;
+    }
+}
+
+/* Footer Pages Styling */
+.page-container.footer-page {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.page-container.footer-page h2 {
+    color: #2c5e1e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.page-container.footer-page p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .page-container.footer-page {
+        margin: 1rem;
+        padding: 1.5rem;
     }
 }
