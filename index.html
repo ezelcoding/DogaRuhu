@@ -7,104 +7,100 @@
     <meta name="description" content="Doğa Ruhu - Sağlıklı bir yaşam için rehberiniz.">
     <title>Doğa Ruhu</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="page-container" style="background-color: white;">
-        <!-- Main Content -->
-        <main>
-            <!-- Hero Section -->
-            <section class="hero">
-                <h2>Doğa Ruhu'na Hoş Geldiniz!</h2>
-            </section>
+    <!-- Header -->
+    <header>
+        <div class="brand">
+            <h1>DogaRuhu</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <!-- Key Features -->
-            <section class="features">
-                <div class="feature-card">
-                    <h3>Sağlıklı Beden</h3>
-                    <p>Fiziksel sağlığınızı desteklemek için öneriler.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Sağlıklı Zihin</h3>
-                    <p>Zihinsel refahınızı artırmak için rehberlik.</p>
-                </div>
-            </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Doğa Ruhu'na Hoş Geldiniz!</h2>
+            <p>Sağlıklı bir yaşam için şimdi bize katılın.</p>
+            <a href="#form-section" class="btn">Şimdi Ücretsiz Kayıt Ol</a>
+        </section>
 
-            <section class="cta" style="text-align: center; margin: 2rem 0; background-color: #f5f5f5; padding: 2rem; opacity: 0.9; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <p style="font-size: 1.2rem; margin-bottom: 1rem;">Sağlıklı bir yaşam için bize katılın.</p>
-                <a href="signup.html" class="btn" role="button" style="display: inline-block; padding: 1rem 2rem; background-color: #2c5e1e; color: white; text-decoration: none; border-radius: 50px; transition: background-color 0.3s ease;">Şimdi Ücretsiz Kayıt Ol</a>
-            </section>
-
-            <!-- Contact Form -->
-            <section id="contact" class="contact-form">
-                <div class="container">
-                    <h2>Bize Ulaşın</h2>
-                    <form action="/submit-form" method="POST">
-                        <div class="form-group">
-                            <label for="name">İsim:</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="form-control"
-                                   placeholder="Adınızı giriniz">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-posta:</label>
-                            <input type="email" id="email" name="email" required
-                                   class="form-control" 
-                                   placeholder="E-posta adresinizi giriniz">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mesajınız:</label>
-                            <textarea id="message" name="message" required
-                                      class="form-control"
-                                      placeholder="Mesajınızı buraya yazın"
-                                      rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i> Gönder
-                        </button>
-                    </form>
+        <!-- Form Section -->
+        <section id="form-section" class="form-section">
+            <h2>Kişisel Bilgileriniz</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="gender">Cinsiyet:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Seçiniz</option>
+                        <option value="male">Erkek</option>
+                        <option value="female">Kadın</option>
+                        <option value="other">Diğer</option>
+                    </select>
                 </div>
-            </section>
-        </main>
-    </div>
+                <div class="form-group">
+                    <label for="age">Yaş:</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="height">Boy (cm):</label>
+                    <input type="number" id="height" name="height" min="50" max="250" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Kilo (kg):</label>
+                    <input type="number" id="weight" name="weight" min="10" max="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="targetWeight">Hedef Kilo (kg):</label>
+                    <input type="number" id="targetWeight" name="targetWeight" min="10" max="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="activity">Günlük Hareket Derecesi:</label>
+                    <select id="activity" name="activity" required>
+                        <option value="">Seçiniz</option>
+                        <option value="1">1 - Düşük</option>
+                        <option value="2">2 - Orta</option>
+                        <option value="3">3 - Yüksek</option>
+                        <option value="4">4 - Çok Yüksek</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="conditions">Hastalık/Hassasiyet (Varsa):</label>
+                    <textarea id="conditions" name="conditions" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Gönder</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <h4>Önemli Bağlantılar</h4>
-                <ul>
-                    <li><a href="GizlilikSozlesmesi.html">Gizlilik Sözleşmesi</a></li>
-                    <li><a href="HizmetKosullari.html">Hizmet Koşulları</a></li>
-                    <li><a href="sitemap.html">Site Haritası</a></li>
-                </ul>
-            </div>
-            <div class="contact-info">
-                <h4>İletişim Bilgileri</h4>
-                <address>
-                    İstanbul, TÜRKİYE
-                </address>
-            </div>
-            <div class="social-links">
-                <h4>Sosyal Medya</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-                </div>
-            </div>
+        <div class="footer-links">
+            <a href="#">Gizlilik Sözleşmesi</a>
+            <a href="#">Hizmet Koşulları</a>
+            <a href="#">Site Haritası</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Doğa Ruhu. Tüm hakları saklıdır.</p>
+        <div class="contact-info">
+            <p>Email: (Eklenecek)</p>
+            <p>Adres: İstanbul, TÜRKİYE</p>
+        </div>
+        <div class="social-links">
+            <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
         </div>
     </footer>
 </body>
