@@ -42,7 +42,7 @@ header nav ul li a {
 /* Hero Section */
 .hero {
     background: url('nature.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgb(35, 199, 57);
     text-align: center;
     padding: 4rem 2rem;
 }

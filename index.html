@@ -31,8 +31,69 @@
         <!-- Hero Section -->
         <section class="hero">
             <h2>Doğa Ruhu'na Hoş Geldiniz!</h2>
-            <p>Sağlıklı bir yaşam için şimdi bize katılın.</p>
-            <a href="#form-section" class="btn">Şimdi Ücretsiz Kayıt Ol</a>
+            <p>Sağlıklı Yaşam Ortağınız.</p>
+    <style>
+        .expandable-button {
+            width: 200px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .expandable-content {
+            display: none;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #F8F9FA;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .expandable-content.show {
+            display: block;
+        }
+    </style>
+    <div>
+        <button class="expandable-button" onclick="toggleContent()">Ön Bilgilendirme Formu</button>
+        <div class="expandable-content" id="content">
+            Sağlıklı Beslenme ve Diyet Platformu İçin Feragatname ve Vizyon Beyanı
+            Giriş
+            Bu belge, sağlıklı beslenme ve diyet planlamaya odaklanan önerilen bir web sitesi/web uygulaması için feragatname ve vizyon beyanını özetlemektedir. Platform, kullanıcılara kişiselleştirilmiş diyet tabloları oluşturmak ve bunları başkalarıyla paylaşmak için araçlar ve kaynaklar sağlamayı amaçlamaktadır. Sağlık ve beslenme etrafında merkezlenen bir topluluk oluşturarak, olumlu yaşam tarzı değişikliklerini teşvik etmeyi ve bireyleri daha iyi sağlık yolculuklarında desteklemeyi umuyoruz.
+            Feragatname
+            Genel Bilgi
+            Bu platformda sağlanan bilgiler yalnızca genel bilgilendirme amaçlıdır. İçeriğin doğru ve güncel olmasını sağlamak için çaba göstersek de, web sitesi veya web sitesinde yer alan bilgiler, ürünler, hizmetler veya ilgili grafiklerle ilgili olarak herhangi bir amaç için eksiksizlik, doğruluk, güvenilirlik, uygunluk veya kullanılabilirlik hakkında açık veya zımni hiçbir beyanda bulunmuyoruz. Kullanıcıların herhangi bir diyet değişikliği yapmadan önce sağlık profesyonellerine danışmaları teşvik edilmektedir.
+            Kullanıcı Tarafından Oluşturulan İçerik
+            Bu platform, diyet planları ve beslenme tavsiyeleri gibi kullanıcı tarafından oluşturulan içerikleri içerebilir. Böyle içeriklerde ifade edilen görüşler ve düşünceler yazarların kendilerine aittir ve platformun resmi politikası veya pozisyonunu yansıtmaz. Kullanıcı tarafından oluşturulan içeriğin içeriği veya doğruluğundan sorumlu değiliz. Kullanıcılar, herhangi bir tavsiye veya öneriyi takip etmeden önce dikkatli olmalı ve kendi araştırmalarını yapmalıdır.
+            Fikri Mülkiyet
+            Kullanıcılar, diyet planlarını paylaşmaya ve başkalarıyla işbirliği yapmaya teşvik edilmektedir. Ancak, kullanıcılar, paylaştıkları herhangi bir içeriği paylaşma hakkına sahip olduklarından ve bu içeriğin başkalarının fikri mülkiyet haklarını ihlal etmediğinden emin olmalıdır. Platform, kullanıcı tarafından oluşturulan içeriğin mülkiyetini talep etmez ancak bu şartları ihlal eden herhangi bir içeriği kaldırma hakkını saklı tutar.
+            Sorumluluk
+            Bu web sitesinin kullanımıyla bağlantılı olarak ortaya çıkan veri veya kar kaybından kaynaklanan herhangi bir kayıp veya hasar dahil ancak bunlarla sınırlı olmamak üzere, herhangi bir kayıp veya hasar için hiçbir durumda sorumlu olmayacağız. Kullanıcılar, kendi sağlık ve refahlarından sorumludur ve gerektiğinde profesyonel tavsiye almalıdır.
+            Vizyon Beyanı
+            Sağlıklı Yaşam Tarzlarını Teşvik Etmek
+            Bu platformun temel vizyonu, bireyleri kişiselleştirilmiş diyet planları oluşturmaya ve paylaşmaya teşvik ederek sağlıklı yaşam tarzlarını teşvik etmektir. İşbirlikçi bir ortam sağlayarak, kullanıcıları bilinçli diyet seçimleri yapmaya ve sağlık hedeflerine ulaşmada birbirlerini desteklemeye ilham vermeyi amaçlıyoruz.
+            Destekleyici Bir Topluluk Oluşturmak
+            Kullanıcıların bağlantı kurabileceği, deneyimlerini paylaşabileceği ve teşvik sunabileceği destekleyici bir topluluk oluşturmayı hayal ediyoruz. Topluluk duygusunu teşvik ederek, bireylerin daha sağlıklı alışkanlıklar peşinde koşmaya ve uzun vadeli refah elde etmeye motive hissettikleri bir alan yaratmayı umuyoruz.
+            Bilgilendirilmiş Seçimleri Teşvik Etmek
+            Platformumuz, güvenilir beslenme bilgilerine ve kaynaklarına erişim sağlayarak bilinçli seçimleri teşvik etmek üzere tasarlanmıştır. İster uzman makaleleri, kullanıcı yorumları veya etkileşimli araçlar aracılığıyla olsun, kullanıcıların diyet ve sağlıkları hakkında bilinçli kararlar vermeleri için gerekli desteği sağlamayı amaçlıyoruz.
+            Gelişime Bağlılık
+            Kullanıcılarımıza daha iyi hizmet verebilmek için platformu sürekli olarak geliştirmeye kararlıyız. Kullanıcı geri bildirimlerini dinleyerek ve beslenme bilimindeki gelişmeleri takip ederek, topluluğumuzun değişen ihtiyaçlarına uyum sağlamak ve evrim geçirmek istiyoruz.
+            Sonuç
+            Bu platformun sağlıklı beslenmeyi teşvik etme ve bireyleri sağlık yolculuklarında destekleme potansiyeli konusunda heyecanlıyız. Kullanıcıların diyet planları oluşturup paylaşmaları için bir alan sağlayarak, daha sağlıklı ve daha bağlantılı bir dünyaya katkıda bulunmayı umuyoruz. Sizi bu yolculuğa katılmaya ve bu vizyonu hayata geçirmeye yardımcı olmaya davet ediyoruz.  <!-- Bu alan boş bırakıldı. İçeriğinizi buraya ekleyebilirsiniz. -->
+        </div>
+    </div>
+
+    <script>
+        function toggleContent() {
+            const content = document.getElementById("content");
+            content.classList.toggle("show");
+        }
+    </script>
         </section>
 
         <!-- Form Section -->
@@ -42,16 +103,21 @@
                 <div class="form-group">
                     <label for="gender">Cinsiyet:</label>
                     <select id="gender" name="gender" required>
-                        <option value="">Seçiniz</option>
                         <option value="male">Erkek</option>
                         <option value="female">Kadın</option>
-                        <option value="other">Diğer</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="age">Yaş:</label>
-                    <input type="number" id="age" name="age" min="1" max="120" required>
-                </div>
+                    <select id="age" name="Yaş" required>
+                        <option value="0-2">0-2 yaş (Bebek)</option>
+                        <option value="3-12">3-12 yaş (Çocuk)</option>
+                        <option value="13-18">13-18 yaş (Ergen)</option>
+                        <option value="19-30">19-30 yaş (Genç Yetişkin)</option>
+                        <option value="31-50">31-50 yaş (Orta Yaş)</option>
+                        <option value="50+">50 yaş ve üzeri (Olgunluk/Yaşlılık)</option>
+                    </select>
+                </div>                
                 <div class="form-group">
                     <label for="height">Boy (cm):</label>
                     <input type="number" id="height" name="height" min="50" max="250" required>
@@ -62,23 +128,22 @@
                 </div>
                 <div class="form-group">
                     <label for="targetWeight">Hedef Kilo (kg):</label>
-                    <input type="number" id="targetWeight" name="targetWeight" min="10" max="500" required>
+                    <input type="number" id="targetWeight" name="targetWeight" min="10" max="120" required>
                 </div>
                 <div class="form-group">
                     <label for="activity">Günlük Hareket Derecesi:</label>
                     <select id="activity" name="activity" required>
-                        <option value="">Seçiniz</option>
-                        <option value="1">1 - Düşük</option>
-                        <option value="2">2 - Orta</option>
-                        <option value="3">3 - Yüksek</option>
-                        <option value="4">4 - Çok Yüksek</option>
+                        <option value="1">1 - Düşük (Ofis ortamı vb.)</option>
+                        <option value="2">2 - Orta (Kafe çalışanı vb.)</option>
+                        <option value="3">3 - Yüksek (Günlük 5000+ adım vb.)</option>
+                        <option value="4">4 - Çok Yüksek (Sportif faaliyetlerde bulunmak vb.)</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="conditions">Hastalık/Hassasiyet (Varsa):</label>
+                    <label for="conditions">Hastalık / Hassasiyet (Varsa):</label>
                     <textarea id="conditions" name="conditions" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn">Gönder</button>
+                <button type="submit" class="btn">Tabloyu Görüntüle</button>
             </form>
         </section>
     </main>
@@ -88,11 +153,6 @@
         <div class="footer-links">
             <a href="#">Gizlilik Sözleşmesi</a>
             <a href="#">Hizmet Koşulları</a>
-            <a href="#">Site Haritası</a>
-        </div>
-        <div class="contact-info">
-            <p>Email: (Eklenecek)</p>
-            <p>Adres: İstanbul, TÜRKİYE</p>
         </div>
         <div class="social-links">
             <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
